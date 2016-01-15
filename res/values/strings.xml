@@ -982,4 +982,8 @@
 
     <!-- When making a call to emergency numbers, show this toast -->
     <string name="disallow_emergency_call">Can\'t make a voice call to emergency services here.</string>
+
+    <!-- Swipe to delete -->
+    <string name="swipe_to_delete_conversation_pref_title">Swipe to delete</string>
+    <string name="swipe_to_delete_conversation_pref_summary">Swipe to the right to delete a conversation</string>
 </resources>
