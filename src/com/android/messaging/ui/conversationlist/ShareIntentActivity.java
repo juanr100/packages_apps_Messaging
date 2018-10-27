@@ -82,8 +82,10 @@ public class ShareIntentActivity extends BaseBugleActivity implements
         final Intent intent = getIntent();
         final String action = intent.getAction();
 
-        String sharedSubject = intent.getStringExtra(Intent.EXTRA_SUBJECT);
-        if (sharedSubject == null) {
+        String sharedSubject = null;
+        if (intent.hasExtra(Intent.EXTRA_SUBJECT)) {
+            sharedSubject = intent.getStringExtra(Intent.EXTRA_SUBJECT);
+        } else if (intent.hasExtra(Intent.EXTRA_TITLE)) {
             sharedSubject = intent.getStringExtra(Intent.EXTRA_TITLE);
         }
 
