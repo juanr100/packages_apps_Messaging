@@ -87,6 +87,7 @@ android_app {
         "10001040",
     ],
     required: [
+        "com.android.messaging_whitelist",
         "libframesequence",
         "libgiftranscode",
     ],
@@ -101,4 +102,12 @@ android_app {
     sdk_version: "current",
 
     product_specific: true,
+}
+
+prebuilt_etc {
+    name: "com.android.messaging_whitelist",
+    product_specific: true,
+    sub_dir: "sysconfig",
+    src: "com.android.messaging_whitelist.xml",
+    filename_from_src: true,
 }
